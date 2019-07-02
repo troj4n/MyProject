@@ -1,0 +1,14 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+<h1>{{title}}</h1>
+
+	{% for a in object %}
+	{% include 'list-inline.html' with blog_post=a truncate=True detail=False %}
+		<!-- <h1>{{a.title}}</h1> 
+		<p>{{a.content}}</p> -->
+	{% endfor %}
+
+
+{% endblock content %}

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+
+{% if user.is_authenticated %}
+<div class="row">
+		{% for object in object %}
+			<!--<p>{{ a.get_absolute_url}}</p>-->
+		{% include 'list-inline.html' with blog_post=object truncate=True detail=False %}
+</div>
+
+
+		
+		{% endfor %}
+
+{% endif %}
+
+{% endblock %}
